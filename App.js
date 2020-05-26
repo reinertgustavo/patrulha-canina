@@ -12,10 +12,9 @@ export default class patrulhaCanina extends React.Component {
       <>
         {/* HEADER DO TOPO */}
         <Appbar.Header>
-          <Appbar.Content
-            title="Patrulha da Aglomeração"
-          />
+          <Appbar.Content title="Patrulha da Aglomeração" />
         </Appbar.Header>
+        {/* FIM HEADER DO TOPO */}
         <View style={styles.container}>
           <View style={styles.containerButtons}>
             <View style={styles.viewButtons}>
