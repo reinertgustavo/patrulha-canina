@@ -1,6 +1,6 @@
 import * as React from 'react';
+import { StyleSheet, View, Image } from 'react-native';
 import { Appbar, TextInput, Button, IconButton, Colors } from 'react-native-paper';
-import { StyleSheet, View } from 'react-native';
 import MapView from 'react-native-maps';
 
 export default class patrulhaCanina extends React.Component {
@@ -31,10 +31,11 @@ export default class patrulhaCanina extends React.Component {
           <View style={styles.viewCameraMap}>
             <View style={styles.viewCamera}>
               {/* IMAGEM */}
+              <Image style={styles.map} source={require('./assets/aglomeracao.jpg')} />
             </View>
             <View style={styles.viewMap}>
               {/* MAP */}
-              <MapView style={styles.map}></MapView>
+              <MapView style={styles.map} />
             </View>
           </View>
           {/* INPUT NÚMERO DE PESSOAS */}
@@ -52,18 +53,15 @@ const styles = StyleSheet.create({
     width: "80%",
     paddingHorizontal: 110
   },
-
   container: {
     alignItems: "center",
     justifyContent: "center",
   },
-
   containerButtons: {
     alignItems: "center",
     justifyContent: "center",
     flexDirection: "row"
   },
-
   button: {
     marginTop: 20,
     width: "80%",
@@ -71,42 +69,35 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center"
   },
-
   viewCameraMap: {
     margin: 20,
     width: "80%",
     height: "40%",
     flexDirection: "row",
   },
-
   viewCamera: {
     flex: 1,
     width: "100%",
     height: "100%"
   },
-
   viewMap: {
     flex: 1,
     width: "100%",
     height: "100%"
   },
-
   map: {
     width: "100%",
     height: "100%"
   },
-
   viewButtons: {
     flexDirection: "row",
     width: "80%"
   },
-
   viewButtonCamera: {
     flex: 1,
     alignItems: "center",
     justifyContent: "center"
   },
-
   viewButtonMap: {
     flex: 1,
     alignItems: "center",
